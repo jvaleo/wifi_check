@@ -13,7 +13,7 @@ logger.addHandler(log_handeler)
 logger.setLevel(logging.DEBUG)
 
 def reboot_host():
-	subprocess.call(['shutdown', '-r', 'now'])
+	subprocess.call(['/sbin/shutdown', '-r', 'now'])
 	
 def ping():
 	ping_response = subprocess.call(['ping', '-c', '5', host])
